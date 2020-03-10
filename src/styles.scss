@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: orion;
+    src: url(assets/fonts/AmuseBouche-LpLW.ttf);
+}
+body{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
