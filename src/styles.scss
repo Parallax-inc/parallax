@@ -2,6 +2,11 @@
     font-family: orion;
     src: url(assets/fonts/AmuseBouche-LpLW.ttf);
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     background-color: white;
     margin: 0;
