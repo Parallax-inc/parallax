@@ -1,16 +1,20 @@
 <div class="container">
     <div class="parallaxBg">
-        <img src="/assets/img/bgParallax.jpg" alt="">
+        <img *ngIf="ImgParallax"  src="/assets/img/bgParallax.jpg" alt="">
+        <img *ngIf="!ImgParallax" src="/assets/img/bg2Parallax.jpg" alt="">
+
     </div>
     <div class="videoBg">
         <video width="100%" height="auto" preload="auto" autoplay="autoplay" loop="loop" poster="">
-            <source src="/assets/video/bg.mp4" type="video/mp4">
-            <source src="/src/assets/video/bg.mp4" type="video/webm">
+            <source src="/assets/video/bg2.mp4" type="video/mp4">
+            <source src="/assets/video/bg2.mp4" type="video/webm">
         </video>
     </div>
     <div class="aboutUs">
         <div class="title">
             <p>Про нас</p>
+            <p class="text">Команда досвідчених спеціалістів, дозволяє нам вирішувати задачі будь-якої складності, та задовільнити найскладніші запити бізнесу.
+                Наш досвід та рекомендації задоволених клієнтів, яскраво про це говорять.</p>
         </div>
     </div>
     <div class="services">
@@ -18,7 +22,14 @@
             <p>Наши работы</p>
         </div>
     </div>
+    <div class="process">
+        <div class="title">
+            <p>Процес разработки</p>
+        </div>
+    </div>
     <div class="contacts">
-        
+        <div class="title">
+            <p>Контакты</p>
+        </div>
     </div>
 </div>

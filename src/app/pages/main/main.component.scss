@@ -30,17 +30,14 @@
     }
   }
 
-  .aboutUs{
+  .aboutUs, .services, .contacts, .process{
       width: 100%;
-      min-height: 600px;
+      min-height: 700px;
       background-color: black;
       padding: 30px;
   }
-  .services{
-      width: 100%;
-      min-height: 650px;
+  .services, .contacts{
       margin-top: 350px;
-      background-color: black;
-      padding: 30px;
   }
+ 
 }
