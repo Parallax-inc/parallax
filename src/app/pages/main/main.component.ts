@@ -31,7 +31,7 @@ export class MainComponent implements OnInit {
     let mas = this.title.split('');
     let maintitle = document.getElementsByClassName('mainTitle');
 
-    console.log(mas);
+    // console.log(mas);
     mas.forEach((elem, index) => {
       setTimeout(() => {
         maintitle[0].insertAdjacentHTML('beforeEnd', `<span class='t${index}'>${elem}</span>`);
