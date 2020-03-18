@@ -13,7 +13,6 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
     this.animatetitle();
-
   }
   @HostListener('window:scroll', ['$event']) onscroll(event): void {
     const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
@@ -28,38 +27,19 @@ export class MainComponent implements OnInit {
   animatetitle() {
     let mas = this.title.split('');
     let maintitle = document.getElementsByClassName('mainTitle');
-    // let span = document.createElement("span");
-    let span = document.createElement("span")
 
     console.log(mas);
-    // debugger
-    mas.forEach((elem) => {
+    mas.forEach((elem, index) => {
       setTimeout(() => {
-        // maintitle[0].appendChild(span).textContent = `${elem}`;
-        maintitle[0].insertAdjacentHTML('beforeEnd' ,`<span>${elem}</span>`);
-
-        console.log(elem);
-
-      }, 1000);
+        maintitle[0].insertAdjacentHTML('beforeEnd', `<span class='t${index}'>${elem}</span>`);
+        anime({
+          targets: `.t${index}`,
+          translateY: 450,
+          duration: 2000,
+          width: 60,
+        });
+      }, index * 200);
     })
-
-
-
   }
-
-  // anime({
-  //   targets: `${this.title}`,
-  //     // translateY: 100,
-  //     // translateY: -100,
-  //     // easing: 'linear',
-  //     duration: 10000,
-  //       // delay: 1000,
-  //       loop: true,
-  //         opacity: 1
-  //   });;
-  // }
-
-
-
 
 }
