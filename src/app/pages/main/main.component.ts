@@ -12,7 +12,10 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.animatetitle();
+    setTimeout(() => {
+      this.animatetitle();
+    }, 500);
+    
   }
   @HostListener('window:scroll', ['$event']) onscroll(event): void {
     const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
@@ -35,11 +38,23 @@ export class MainComponent implements OnInit {
         anime({
           targets: `.t${index}`,
           translateY: 450,
+          scale: 1.2,
           duration: 2000,
           width: 60,
         });
-      }, index * 200);
+      }, index * 70);
     })
+
+    setTimeout(() => {
+      anime({
+        targets: `.smallTitle>p`,
+        translateY: -200,
+        easing: 'linear',
+        duration: 300,
+      });
+    }, 2000);
   }
+
+  
 
 }
