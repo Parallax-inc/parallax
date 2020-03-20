@@ -27,6 +27,7 @@
       margin: 50px auto;
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
 
       div {
         input {
@@ -53,6 +54,24 @@
           font-size: 20px;
           padding: 15px;
         }
+      }
+      button{
+        padding: 10px;
+        border: 1px solid white;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 5px;;
+        margin-top: 25px;
+        outline: none;
+        opacity: 0.7;
+        
+        &:hover{
+          transition: 0.5s;
+          opacity: 1;
+        }
+
       }
     }
 
