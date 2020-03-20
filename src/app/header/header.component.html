@@ -2,18 +2,43 @@
     <div class="logo">Parallax</div>
     <div class="tel">+38(097) 945 53 18</div>
     <div class="menu" [ngClass]="{menubig:menubig}" (click)="showMenu()">
-        <span *ngIf="!menubig" id="menuHint" >Меню</span>
-        <div class="burgerMenu"   >
+        <span *ngIf="!menubig" id="menuHint">Меню</span>
+        <div class="burgerMenu">
             <span></span>
         </div>
-        <div class="menuList" [ngClass]="{menuListShow:menubig}" >
+        <div class="menuList" [ngClass]="{menuListShow:menubig}">
             <ul>
-                <li routerLink = 'main'>Головна</li>
-                <li routerLink = 'services'>Про нас</li>
-                <li routerLink = 'portfolio'>Наші роботи</li>
-                <li routerLink = 'services'>Послуги</li>
-                <li routerLink = 'contacts'>Контакти</li>
+                <li routerLink='main'>Головна</li>
+                <li routerLink='services'>Про нас</li>
+                <li routerLink='portfolio'>Наші роботи</li>
+                <li routerLink='services'>Послуги</li>
+                <li routerLink='contacts'>Контакти</li>
             </ul>
+        </div>
+    </div>
+    <div class="feedBackForm" (click)="feedBackForm()">
+        <p>Напишіть нам</p>
+    </div>
+
+
+    <div class="modalFeedBackForm" [ngClass]="{modalFeedBackShow:feedBackShow}">
+        <h1>Контактна форма</h1>
+        <form action="">
+            <div>
+                <p>*Ваше імя:</p>
+                <input type="text" >
+                <p>*Ваш телефон:</p>
+                <input type="text" >
+                <p>*Ваше email:</p>
+                <input type="text" >
+            </div>
+            <div>
+                <p>*Ваше повідомлення</p>
+                <textarea name="" id="" cols="25" rows="10"></textarea>
+            </div>
+        </form>
+        <div class="closeModal" (click)="feedBackForm()">
+            <img src="/assets/img/close.svg" alt="">
         </div>
     </div>
 </div>

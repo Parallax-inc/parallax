@@ -7,18 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   menubig: boolean = false;
+  feedBackShow: boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
 
   showMenu(){
-    console.log('work');
     if(this.menubig){
       this.menubig = false;
     } else {
       this.menubig = true;
     }
     
+  }
+
+  feedBackForm(){
+    if(this.feedBackShow){
+      this.feedBackShow = false;
+    } else {
+      this.feedBackShow = true;
+    }
   }
 }
