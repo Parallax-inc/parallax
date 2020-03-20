@@ -1,16 +1,18 @@
 <div class="container">
     <div class="logo">Parallax</div>
+    <div class="tel">+38(097) 945 53 18</div>
     <div class="menu" [ngClass]="{menubig:menubig}" (click)="showMenu()">
+        <span *ngIf="!menubig" id="menuHint" >Меню</span>
         <div class="burgerMenu"   >
             <span></span>
         </div>
         <div class="menuList" [ngClass]="{menuListShow:menubig}" >
             <ul>
-                <li routerLink = 'main'>Home</li>
-                <li routerLink = 'services'>About us</li>
-                <li routerLink = 'portfolio'>Portfolio</li>
-                <li routerLink = 'services'>Services</li>
-                <li routerLink = 'contacts'>Contacts</li>
+                <li routerLink = 'main'>Головна</li>
+                <li routerLink = 'services'>Про нас</li>
+                <li routerLink = 'portfolio'>Наші роботи</li>
+                <li routerLink = 'services'>Послуги</li>
+                <li routerLink = 'contacts'>Контакти</li>
             </ul>
         </div>
     </div>

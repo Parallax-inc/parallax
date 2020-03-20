@@ -8,7 +8,7 @@ import anime from 'animejs/lib/anime.es.js';
 })
 export class MainComponent implements OnInit {
   ImgParallax: boolean;
-  title = 'Веб студия - PARALLAX';
+  title = 'Веб студія - PARALLAX';
   constructor() { }
 
   ngOnInit() {
@@ -20,7 +20,7 @@ export class MainComponent implements OnInit {
   @HostListener('window:scroll', ['$event']) onscroll(event): void {
     const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
     // console.log(top);
-    if (top > 2200) {
+    if (top > 2400) {
       this.ImgParallax = false;
     } else {
       this.ImgParallax = true;
@@ -34,7 +34,7 @@ export class MainComponent implements OnInit {
     // console.log(mas);
     mas.forEach((elem, index) => {
       setTimeout(() => {
-        maintitle[0].insertAdjacentHTML('beforeEnd', `<span class='t${index}'>${elem}</span>`);
+        maintitle[0].insertAdjacentHTML('beforeend', `<span class='t${index}'>${elem}</span>`);
         anime({
           targets: `.t${index}`,
           translateY: 450,

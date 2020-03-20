@@ -1,18 +1,20 @@
 <div class="container">
     <div class="parallaxBg">
-        <img *ngIf="ImgParallax"  src="/assets/img/bgParallax.jpg" alt="">
+        <img *ngIf="ImgParallax" src="/assets/img/bgParallax.jpg" alt="">
         <img *ngIf="!ImgParallax" src="/assets/img/bg2Parallax.jpg" alt="">
-       
+
     </div>
     <div class="videoBg">
         <div class="darkHover">
             <div class="mainTitle"></div>
             <div class="smallTitle">
-                <p>Надаємо комплексні послуги з просування бізнесу в інтернеті: дизайн, cтворення сайтів, підтримка сайту</p>
+                <p>Надаємо комплексні послуги з просування бізнесу в інтернеті: дизайн, cтворення сайтів, підтримка
+                    сайту</p>
             </div>
         </div>
-        
-        <video width="100%" height="auto" preload="auto" autoplay="autoplay" loop="loop" poster="/assets/img/poster.png">
+
+        <video width="100%" height="auto" preload="auto" autoplay="autoplay" loop="loop"
+            poster="/assets/img/poster.png">
             <source src="/assets/video/bg.mp4" type="video/mp4">
             <source src="/assets/video/bg.webm" type="video/webm">
         </video>
@@ -20,23 +22,69 @@
     <div class="aboutUs">
         <div class="title">
             <p>Про нас</p>
-            <p class="text">Команда досвідчених спеціалістів, дозволяє нам вирішувати задачі будь-якої складності, та задовільнити найскладніші запити бізнесу.
+        </div>
+        <div class="text">
+            <p>Команда досвідчених спеціалістів, дозволяє нам вирішувати задачі будь-якої складності, та
+                задовільнити найскладніші запити бізнесу.
                 Наш досвід та рекомендації задоволених клієнтів, яскраво про це говорять.</p>
         </div>
+        <div class="technologis">
+            <p>Технології:</p>
+            <img src="/assets/img/angular.png" alt="">
+            <img src="/assets/img/react.png" alt="">
+            <img src="/assets/img/bootstrap.png" alt="">
+            <img src="/assets/img/image.png" alt="">
+            <img src="/assets/img/js.png" alt="">
+            <img src="/assets/img/node.js.png" alt="">
+            <img src="/assets/img/mongodb.png" alt="">
+            <img src="/assets/img/figma.png" alt="">
+            <img src="/assets/img/redux.png" alt="">
+
+        </div>
+
     </div>
     <div class="services">
         <div class="title">
-            <p>Наши работы</p>
+            <p>Наші роботи</p>
         </div>
+        <div class="workPart">
+            <div class="darkHover">
+                <div class="nameSite">NEOFOTO</div>
+                <div class="themesSite">Сайт - портфоліо</div>
+                <div class="subscribeSite">Фотостудія, проведення фотосесій професійним фотографом, візаж</div>
+                <div class="linkSite">
+                    <a href="http://neofoto.com.ua/" target="_blank">Перейти до сайту</a>
+                    <span class="arrow1"><img src="/assets/img/next.svg" alt=""></span>
+                    <span class="arrow2"><img src="/assets/img/next.svg" alt=""></span>
+                    <span class="arrow3"><img src="/assets/img/next.svg" alt=""></span>
+                </div>
+            </div>
+            <img src="/assets/img/works/neofoto/main.png" alt="">
+        </div>
+        <div class="workPart">
+            <div class="darkHover">
+                <div class="nameSite">BOFI</div>
+                <div class="themesSite">Корпоративний сайт</div>
+                <div class="subscribeSite">Продаж та встановлення кліматичного обладнання</div>
+                <div class="linkSite">
+                    <a href="http://bofi.com.ua/" target="_blank">Перейти до сайту</a>
+                    <span class="arrow1"><img src="/assets/img/next.svg" alt=""></span>
+                    <span class="arrow2"><img src="/assets/img/next.svg" alt=""></span>
+                    <span class="arrow3"><img src="/assets/img/next.svg" alt=""></span>
+                </div>
+            </div>
+            <img src="/assets/img/works/bofi/main.png" alt="">
+        </div>
+        <button routerLink='/portfolio'>Перейти до портфоліо</button>
     </div>
     <div class="process">
         <div class="title">
-            <p>Процес разработки</p>
+            <p>Процес розробки</p>
         </div>
     </div>
     <div class="contacts">
         <div class="title">
-            <p>Контакты</p>
+            <p>Контакти</p>
         </div>
     </div>
 </div>

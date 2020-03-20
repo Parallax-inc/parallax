@@ -1,13 +1,14 @@
-@font-face{
-    font-family: orion;
-    src: url(assets/fonts/AmuseBouche-LpLW.ttf);
+@font-face {
+  font-family: orion;
+  src: url(assets/fonts/AmuseBouche-LpLW.ttf);
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: #030303;
-color: whitesmoke;
+body {
+  background-color: #030303;
+  color: whitesmoke;
+  font-family: monospace;
 }
