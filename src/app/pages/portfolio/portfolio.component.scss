@@ -1,0 +1,13 @@
+.container{
+    width: 100%;
+    min-height: 500px;
+    padding: 150px;
+    .goToMain{
+        padding: 10px;
+        font-size: 22px;
+        border: 1px solid white;
+        border-radius: 5px;
+        width: fit-content;
+        cursor: pointer;
+    }
+}
