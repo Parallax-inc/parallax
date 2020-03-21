@@ -8,6 +8,8 @@ import anime from 'animejs/lib/anime.es.js';
 })
 export class MainComponent implements OnInit {
   ImgParallax: boolean;
+  scrollBtn: boolean;
+  arrowUp: boolean;
   title = 'Веб студія - PARALLAX';
   constructor() { }
 
@@ -24,6 +26,11 @@ export class MainComponent implements OnInit {
       this.ImgParallax = false;
     } else {
       this.ImgParallax = true;
+    }
+    if (top > 800) {
+      this.scrollBtn = true;
+    } else {
+      this.scrollBtn = false;
     }
   }
 
@@ -55,6 +62,20 @@ export class MainComponent implements OnInit {
     }, 2000);
   }
 
-  
+  scrollUp(){
+    const scroll = setInterval(scrollStep, 20);
+    this.arrowUp = true;
+    function scrollStep() {
+      const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+      if (top > 0) {
+        window.scrollBy(0, -100);
+      } else {
+        clearInterval(scroll);
+      }
+    }
+    setTimeout(() => {
+      this.arrowUp = false;
+    }, 1500);
+  }
 
 }

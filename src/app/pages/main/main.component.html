@@ -43,9 +43,9 @@
         </div>
 
     </div>
-    <div class="services">
+    <div class="ourWorks">
         <div class="title">
-            <p>Наші роботи</p>
+            <p>Наші останні роботи</p>
         </div>
         <div class="workPart">
             <div class="darkHover">
@@ -77,14 +77,69 @@
         </div>
         <button routerLink='/portfolio'>Перейти до портфоліо</button>
     </div>
-    <div class="process">
+    <div class="services">
         <div class="title">
-            <p>Процес розробки</p>
+            <p>Послуги</p>
         </div>
+        <div class="servDesign servPart">
+            <p>Розробка дизайну</p><br>
+        </div>
+        <div class="servSiteDev servPart">
+            <p>Розробка розробка сайту</p><br>
+        </div>
+        <div class="servHosting servPart">
+            <p>Розміщення сайту на власному хостінгу</p><br>
+        </div>
+        <div class="servDomain servPart">
+            <p>Покупка домену (імені)</p><br>
+        </div>
+        <div class="serv5 servPart">
+            <p>Послуга 5</p><br>
+        </div>
+        <div class="serv6 servPart">
+            <p>Послуга 6</p><br>
+        </div>
+
+
+        <!-- <div class="servDesign">
+            <p>Розроблення дизайну</p>
+        </div> -->
+    </div>
+    <div class="whyWe">
+        <div class="title">
+            <p>Чому варто обрати нас</p>
+        </div>
+        <p></p><br>
     </div>
     <div class="contacts">
         <div class="title">
             <p>Контакти</p>
         </div>
+        <div class="feedbackForm">
+            <form action="">
+                <div>
+                    <p>*Ваше імя:</p>
+                    <input type="text">
+                    <p>*Ваш телефон:</p>
+                    <input type="text">
+                    <p>*Ваше email:</p>
+                    <input type="text">
+                </div>
+                <div>
+                    <p>*Ваше повідомлення</p>
+                    <textarea name="" id="" cols="20" rows="10"></textarea>
+                </div>
+                <button>Відправити</button>
+            </form>
+        </div>
+        <div class="contactsMini">
+            <p>тел. +38(097) 945 53 18 Kyivstar</p>
+            <p>тел. +38(066) 603 86 28 Vodafon</p>
+            <p>email: roman120487@gmail.com</p>
+        </div>
+
+    </div>
+    <div *ngIf="scrollBtn" [ngClass]="{arrowUp:arrowUp}" class="goUpBtn" (click)="scrollUp()">
+        <img src="/assets/img/up-arrow.svg" alt="">
     </div>
 </div>
