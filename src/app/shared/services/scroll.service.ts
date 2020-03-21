@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 // import { of } from 'rxjs/Observable/of'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScrollService {
-  scrollPoint: any;
+  scrollPoint = new BehaviorSubject('')
   constructor() { }
 
-  scroll(point): Observable<any> {
-    return point;
-    // console.log(point);
-
+  scroll(elem: string) {
+    this.scrollPoint.next(elem);  
   }
+
+ 
+
 }

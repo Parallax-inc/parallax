@@ -9,7 +9,7 @@ import { ScrollService } from '../shared/services/scroll.service';
 export class HeaderComponent implements OnInit {
   menubig: boolean = false;
   feedBackShow: boolean = false;
-  constructor(public scroll: ScrollService) { }
+  constructor(public scrollService: ScrollService) { }
 
   ngOnInit() {
   }

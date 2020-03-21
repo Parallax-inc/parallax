@@ -12,23 +12,80 @@ export class MainComponent implements OnInit {
   scrollBtn: boolean;
   arrowUp: boolean;
   title = 'Веб студія - PARALLAX';
-  scrollNumb: any;
-  constructor(public scroll: ScrollService) { }
+  scrollPart: string;
+
+  constructor(public scrollService: ScrollService) { }
 
   ngOnInit() {
     setTimeout(() => {
       this.animatetitle();
     }, 500);
-    this.scrollPoint()
+
+    this.scrollService.scrollPoint.subscribe(name => {
+      this.scrollPart = name;
+      console.log(this.scrollPart);
+      this.scrollPoint();
+    })
+
+
 
   }
 
-  scrollPoint(){
-   this.scroll.scroll().subscribe(scroll=>{
-     this.scrollNumb = scroll;
-     console.log(this.scrollNumb);
-     
-   })
+  scrollPoint(): void {
+    let winHeight = document.documentElement.clientHeight;
+
+    let point = 0;
+    if (this.scrollPart == 'main') {
+      point = 0;
+
+    } else if (this.scrollPart == 'aboutUs') {
+      point = winHeight;
+    } else if (this.scrollPart == 'portfolio') {
+      point = winHeight * 2 + 350;
+    } else if (this.scrollPart == 'services') {
+      point = winHeight * 3 + 350;
+    } else if (this.scrollPart == 'whyWe') {
+      point = winHeight * 4 + 700;
+    } else if (this.scrollPart == 'contacts') {
+      point = winHeight * 5 + 700;
+    }
+
+    const scroll = setInterval(scrollStep, 20);
+    function scrollStep() {
+      const position = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+      // console.log(position);
+      let difference = position - point;
+
+      if (position > point) {
+        difference = position - point;
+      } else {
+        difference = point - position;
+      }
+
+
+      if (position > point) {
+        if (difference < 100) {
+          clearInterval(scroll);
+        }
+        window.scrollBy(0, -100);
+      }
+      else if (position < point) {
+        if (difference < 100) {
+          clearInterval(scroll);
+        }
+        window.scrollBy(0, 100);
+      }
+      else {
+        clearInterval(scroll);
+      }
+    }
+
+    if (this.scrollPart == 'main') {
+      window.scrollBy(0, -100);
+    }
+
+    // console.log('scroll');
+
   }
 
   @HostListener('window:scroll', ['$event']) onscroll(event): void {
@@ -74,7 +131,7 @@ export class MainComponent implements OnInit {
     }, 2000);
   }
 
-  scrollUp(){
+  scrollUp() {
     const scroll = setInterval(scrollStep, 20);
     this.arrowUp = true;
     function scrollStep() {

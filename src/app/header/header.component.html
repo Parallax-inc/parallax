@@ -8,11 +8,12 @@
         </div>
         <div class="menuList" [ngClass]="{menuListShow:menubig}">
             <ul>
-                <li (click)="scroll.scroll('main')" >Головна</li>
-                <li (click)="scroll.scroll('aboutUs')">Про нас</li>
-                <li routerLink='portfolio'>Наші роботи</li>
-                <li routerLink='main'>Послуги</li>
-                <li routerLink='main'>Контакти</li>
+                <li (click)="scrollService.scroll('main')" >Головна</li>
+                <li (click)="scrollService.scroll('aboutUs')">Про нас</li>
+                <li (click)="scrollService.scroll('portfolio')">Наші роботи</li>
+                <li (click)="scrollService.scroll('services')">Послуги</li>
+                <li (click)="scrollService.scroll('whyWe')">Чому ми?</li>
+                <li (click)="scrollService.scroll('contacts')">Контакти</li>
             </ul>
         </div>
     </div>
