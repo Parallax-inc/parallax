@@ -8,11 +8,11 @@
         </div>
         <div class="menuList" [ngClass]="{menuListShow:menubig}">
             <ul>
-                <li routerLink='main'>Головна</li>
-                <li routerLink='services'>Про нас</li>
+                <li (click)="scroll.scroll('main')" >Головна</li>
+                <li (click)="scroll.scroll('aboutUs')">Про нас</li>
                 <li routerLink='portfolio'>Наші роботи</li>
-                <li routerLink='services'>Послуги</li>
-                <li routerLink='contacts'>Контакти</li>
+                <li routerLink='main'>Послуги</li>
+                <li routerLink='main'>Контакти</li>
             </ul>
         </div>
     </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import anime from 'animejs/lib/anime.es.js';
+import { ScrollService } from 'src/app/shared/services/scroll.service';
 
 @Component({
   selector: 'app-main',
@@ -11,14 +12,25 @@ export class MainComponent implements OnInit {
   scrollBtn: boolean;
   arrowUp: boolean;
   title = 'Веб студія - PARALLAX';
-  constructor() { }
+  scrollNumb: any;
+  constructor(public scroll: ScrollService) { }
 
   ngOnInit() {
     setTimeout(() => {
       this.animatetitle();
     }, 500);
-    
+    this.scrollPoint()
+
   }
+
+  scrollPoint(){
+   this.scroll.scroll().subscribe(scroll=>{
+     this.scrollNumb = scroll;
+     console.log(this.scrollNumb);
+     
+   })
+  }
+
   @HostListener('window:scroll', ['$event']) onscroll(event): void {
     const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
     // console.log(top);

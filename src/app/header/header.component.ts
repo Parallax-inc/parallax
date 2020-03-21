@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollService } from '../shared/services/scroll.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   menubig: boolean = false;
   feedBackShow: boolean = false;
-  constructor() { }
+  constructor(public scroll: ScrollService) { }
 
   ngOnInit() {
   }
