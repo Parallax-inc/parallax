@@ -50,7 +50,7 @@ export class MainComponent implements OnInit {
       point = winHeight * 5 + 700;
     }
 
-    const scroll = setInterval(scrollStep, 20);
+    const scroll = setInterval(scrollStep, 10);
     function scrollStep() {
       const position = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
       // console.log(position);
@@ -64,16 +64,18 @@ export class MainComponent implements OnInit {
 
 
       if (position > point) {
-        if (difference < 100) {
-          clearInterval(scroll);
+        if (difference < 20) {
+          window.scrollBy(0, -1);
+        } else {
+          window.scrollBy(0, -20);
         }
-        window.scrollBy(0, -100);
       }
       else if (position < point) {
-        if (difference < 100) {
-          clearInterval(scroll);
+        if (difference < 20) {
+          window.scrollBy(0, 1);
+        } else {
+          window.scrollBy(0, 20);
         }
-        window.scrollBy(0, 100);
       }
       else {
         clearInterval(scroll);
