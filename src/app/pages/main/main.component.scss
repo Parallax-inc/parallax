@@ -340,12 +340,11 @@
       font-size: 22px;
       color: white;
       padding: 15px;
-      // background-color: rgba(255, 255, 255, 0.5);
       border-radius: 15px;
       position: relative;
       overflow: hidden;
       cursor: pointer;
-      // border: 1px solid white;
+      // transform: translateY(300px);
       z-index: 1;
       &:hover img{
         transform: scale(1.2);
@@ -374,11 +373,12 @@
         z-index: -2;
       }
       p{
+        font-size: 18px;
         position: absolute;
         width: 90%;
-        text-align: justify;
+        // text-align: center;
         bottom: 10px;
-        margin-bottom: -150px;
+        margin-bottom: -55%;
       }
       
       
@@ -405,11 +405,97 @@
       grid-row: 5/8;
       grid-column: 1;
     }
-    .serv5 {
+    .support {
       grid-row: 6/9;
       grid-column: 2;
     }
-    .serv6 {
+    .tea {
+      grid-row: 5/8;
+      grid-column: 3;
+    }
+  }
+  .whyWe {
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px repeat(8, 1fr);
+    gap: 20px;
+    
+    .whyPart {
+      font-size: 22px;
+      color: white;
+      padding: 15px;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      // transform: translateY(300px);
+      z-index: 1;
+
+      &:hover img{
+        transform: scale(1.2);
+        transition: 1s;
+      }
+      &:hover p{
+        margin-bottom: 0px;
+        transition: 1s;
+      }
+      .darkHover {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+      }
+      p{
+        font-size: 18px;
+        position: absolute;
+        width: 90%;
+        // text-align: center;
+        bottom: 10px;
+        margin-bottom: -55%;
+      }
+      
+      
+    }
+    .title {
+      margin: 0;
+      grid-row: 1;
+      grid-column: 2;
+      // height: 50px;
+    }
+    .servDesign {
+      grid-row: 2/5;
+      grid-column: 1;
+    }
+    .servSiteDev {
+      grid-row: 3/6;
+      grid-column: 2;
+    }
+    .servHosting {
+      grid-row: 2/5;
+      grid-column: 3;
+    }
+    .servDomain {
+      grid-row: 5/8;
+      grid-column: 1;
+    }
+    .support {
+      grid-row: 6/9;
+      grid-column: 2;
+    }
+    .tea {
       grid-row: 5/8;
       grid-column: 3;
     }

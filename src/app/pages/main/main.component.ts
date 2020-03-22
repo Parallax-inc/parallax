@@ -14,7 +14,6 @@ export class MainComponent implements OnInit {
   scrollBtn: boolean;
   arrowUp: boolean;
   title = 'Веб студія - PARALLAX';
-  // scrollPart: string;
 
   constructor(public scrollService: ScrollService) { }
 
@@ -23,16 +22,29 @@ export class MainComponent implements OnInit {
       this.animatetitle();
     }, 500);
 
-   // this.scrollService.scrollPoint.subscribe(name => {
-    //   this.scrollPart = name;
-    //   console.log(this.scrollPart);
-    //   this.scrollPoint();
-    // })
-
-
-
   }
 
+  @HostListener('window:scroll', ['$event']) onscroll(event): void {
+    const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+    // console.log(top);
+    if (top > 2400) {
+      this.ImgParallax = false;
+    } else {
+      this.ImgParallax = true;
+    }
+    if (top > 800) {
+      this.scrollBtn = true;
+    } else {
+      this.scrollBtn = false;
+    }
+  }
+
+  animationService(){
+    anime({
+      targets: `.servPart`,
+      translateY: 10,
+    });
+  }
   showMenu(){
     if(this.menubig){
       this.menubig = false;
@@ -101,20 +113,7 @@ export class MainComponent implements OnInit {
 
   }
 
-  @HostListener('window:scroll', ['$event']) onscroll(event): void {
-    const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
-    // console.log(top);
-    if (top > 2400) {
-      this.ImgParallax = false;
-    } else {
-      this.ImgParallax = true;
-    }
-    if (top > 800) {
-      this.scrollBtn = true;
-    } else {
-      this.scrollBtn = false;
-    }
-  }
+ 
 
   animatetitle() {
     let mas = this.title.split('');
