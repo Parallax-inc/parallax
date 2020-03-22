@@ -53,16 +53,19 @@
   .modalFeedBackForm {
     position: fixed;
     top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100vw;
+    height: 100vh;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
     margin-left: -100vw;
     // z-index: 190;
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
-    display: none;
+    // display: none;
     padding: 150px;
     font-size: 24px;
+    transition: 0.5s;
 
     form {
       width: 700px;
@@ -123,6 +126,10 @@
       width: 40px;
       height: 40px;
       cursor: pointer;
+      &:hover{
+        transform: rotate(360deg);
+        transition: 1s;
+      }
 
       img {
         width: 100%;
@@ -131,8 +138,8 @@
     }
   }
   .modalFeedBackShow {
-    transition: 1s;
+    transition: 0.5s;
     margin-left: 0;
-    display: block;
+    // display: block;
   }
 }
