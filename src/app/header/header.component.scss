@@ -126,6 +126,7 @@
       width: 40px;
       height: 40px;
       cursor: pointer;
+      transition: 1s;
       &:hover{
         transform: rotate(360deg);
         transition: 1s;
