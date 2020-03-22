@@ -1,4 +1,20 @@
 <div class="container">
+    <div class="menu" [ngClass]="{menubig:menubig}" (click)="showMenu()">
+        <span *ngIf="!menubig" id="menuHint">Меню</span>
+        <div class="burgerMenu">
+            <span></span>
+        </div>
+        <div class="menuList" [ngClass]="{menuListShow:menubig}">
+            <ul>
+                <li (click)="scrollPoint('main')" >Головна</li>
+                <li (click)="scrollPoint('aboutUs')">Про нас</li>
+                <li (click)="scrollPoint('portfolio')">Наші роботи</li>
+                <li (click)="scrollPoint('services')">Послуги</li>
+                <li (click)="scrollPoint('whyWe')">Чому ми?</li>
+                <li (click)="scrollPoint('contacts')">Контакти</li>
+            </ul>
+        </div>
+    </div>
     <div class="parallaxBg">
         <img *ngIf="ImgParallax" src="/assets/img/bgParallax.jpg" alt="">
         <img *ngIf="!ImgParallax" src="/assets/img/bg2Parallax.jpg" alt="">

@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import anime from 'animejs/lib/anime.es.js';
 import { ScrollService } from 'src/app/shared/services/scroll.service';
 
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -9,10 +10,11 @@ import { ScrollService } from 'src/app/shared/services/scroll.service';
 })
 export class MainComponent implements OnInit {
   ImgParallax: boolean;
+  menubig: boolean = false;
   scrollBtn: boolean;
   arrowUp: boolean;
   title = 'Веб студія - PARALLAX';
-  scrollPart: string;
+  // scrollPart: string;
 
   constructor(public scrollService: ScrollService) { }
 
@@ -21,32 +23,41 @@ export class MainComponent implements OnInit {
       this.animatetitle();
     }, 500);
 
-    this.scrollService.scrollPoint.subscribe(name => {
-      this.scrollPart = name;
-      console.log(this.scrollPart);
-      this.scrollPoint();
-    })
+   // this.scrollService.scrollPoint.subscribe(name => {
+    //   this.scrollPart = name;
+    //   console.log(this.scrollPart);
+    //   this.scrollPoint();
+    // })
 
 
 
   }
 
-  scrollPoint(): void {
+  showMenu(){
+    if(this.menubig){
+      this.menubig = false;
+    } else {
+      this.menubig = true;
+    }
+    
+  }
+
+  scrollPoint(scrollPart): void {
     let winHeight = document.documentElement.clientHeight;
 
     let point = 0;
-    if (this.scrollPart == 'main') {
+    if (scrollPart == 'main') {
       point = 0;
 
-    } else if (this.scrollPart == 'aboutUs') {
+    } else if (scrollPart == 'aboutUs') {
       point = winHeight;
-    } else if (this.scrollPart == 'portfolio') {
+    } else if (scrollPart == 'portfolio') {
       point = winHeight * 2 + 350;
-    } else if (this.scrollPart == 'services') {
+    } else if (scrollPart == 'services') {
       point = winHeight * 3 + 350;
-    } else if (this.scrollPart == 'whyWe') {
+    } else if (scrollPart == 'whyWe') {
       point = winHeight * 4 + 700;
-    } else if (this.scrollPart == 'contacts') {
+    } else if (scrollPart == 'contacts') {
       point = winHeight * 5 + 700;
     }
 
@@ -82,7 +93,7 @@ export class MainComponent implements OnInit {
       }
     }
 
-    if (this.scrollPart == 'main') {
+    if (scrollPart == 'main') {
       window.scrollBy(0, -100);
     }
 

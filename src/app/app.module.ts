@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +12,8 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { AdminComponent } from './admin/admin.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +23,12 @@ import { AdminComponent } from './admin/admin.component';
     ContactsComponent,
     PortfolioComponent,
     ServicesComponent,
-    AdminComponent
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,21 +7,21 @@ import { ScrollService } from '../shared/services/scroll.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  menubig: boolean = false;
+  // menubig: boolean = false;
   feedBackShow: boolean = false;
   constructor(public scrollService: ScrollService) { }
 
   ngOnInit() {
   }
 
-  showMenu(){
-    if(this.menubig){
-      this.menubig = false;
-    } else {
-      this.menubig = true;
-    }
+  // showMenu(){
+  //   if(this.menubig){
+  //     this.menubig = false;
+  //   } else {
+  //     this.menubig = true;
+  //   }
     
-  }
+  // }
 
   feedBackForm(){
     if(this.feedBackShow){

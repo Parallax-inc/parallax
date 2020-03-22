@@ -137,90 +137,90 @@
     }
   }
 
-  .menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 70px;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding-top: 30px;
-    transition: 0.5s;
-    z-index: 99;
-    #menuHint {
-      font-size: 18px;
-      margin-left: 10px;
-    }
+  // .menu {
+  //   position: fixed;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   width: 70px;
+  //   background-color: rgba(0, 0, 0, 0.7);
+  //   padding-top: 30px;
+  //   transition: 0.5s;
+  //   z-index: 99;
+  //   #menuHint {
+  //     font-size: 18px;
+  //     margin-left: 10px;
+  //   }
 
-    .burgerMenu {
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      cursor: pointer;
-      transition: 0.5s;
+  //   .burgerMenu {
+  //     width: 60px;
+  //     height: 60px;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     position: absolute;
+  //     cursor: pointer;
+  //     transition: 0.5s;
 
-      span::before,
-      span,
-      span::after {
-        position: absolute;
-        width: 40px;
-        height: 4px;
-        background-color: white;
-        transition: 0.3s;
-        border-radius: 2px;
-      }
-      span:before,
-      span::after {
-        content: "";
-        display: block;
-      }
-      span:before {
-        transform: translateY(-15px);
-      }
-      span:after {
-        transform: translateY(15px);
-      }
-    }
-  }
-  .menubig {
-    width: 450px;
-    padding: 30px;
-    .burgerMenu {
-      span:after {
-        transform: rotate(-45deg);
-      }
-      span:before {
-        transform: rotate(45deg);
-      }
-      span {
-        height: 0;
-      }
-    }
-  }
-  .menuList {
-    position: absolute;
-    top: 200px;
-    left: 0;
-    opacity: 0;
-    transition: 0.5s;
-    margin-left: 25px;
-    li {
-      list-style-type: none;
-      margin-left: 20px;
-      line-height: 2;
-      font-size: 35px;
-      color: white;
-      // font-weight: bold;
-    }
-    li:hover {
-      list-style-type: disc;
-      cursor: pointer;
-    }
-  }
-  .menuListShow {
-    opacity: 1;
-  }
+  //     span::before,
+  //     span,
+  //     span::after {
+  //       position: absolute;
+  //       width: 40px;
+  //       height: 4px;
+  //       background-color: white;
+  //       transition: 0.3s;
+  //       border-radius: 2px;
+  //     }
+  //     span:before,
+  //     span::after {
+  //       content: "";
+  //       display: block;
+  //     }
+  //     span:before {
+  //       transform: translateY(-15px);
+  //     }
+  //     span:after {
+  //       transform: translateY(15px);
+  //     }
+  //   }
+  // }
+  // .menubig {
+  //   width: 450px;
+  //   padding: 30px;
+  //   .burgerMenu {
+  //     span:after {
+  //       transform: rotate(-45deg);
+  //     }
+  //     span:before {
+  //       transform: rotate(45deg);
+  //     }
+  //     span {
+  //       height: 0;
+  //     }
+  //   }
+  // }
+  // .menuList {
+  //   position: absolute;
+  //   top: 200px;
+  //   left: 0;
+  //   opacity: 0;
+  //   transition: 0.5s;
+  //   margin-left: 25px;
+  //   li {
+  //     list-style-type: none;
+  //     margin-left: 20px;
+  //     line-height: 2;
+  //     font-size: 35px;
+  //     color: white;
+  //     // font-weight: bold;
+  //   }
+  //   li:hover {
+  //     list-style-type: disc;
+  //     cursor: pointer;
+  //   }
+  // }
+  // .menuListShow {
+  //   opacity: 1;
+  // }
 }
