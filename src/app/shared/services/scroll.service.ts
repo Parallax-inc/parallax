@@ -7,12 +7,12 @@ import { Observable, BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ScrollService {
-  scrollPoint = new BehaviorSubject('')
+  // scrollPoint = new BehaviorSubject('')
   constructor() { }
 
-  scroll(elem: string) {
-    this.scrollPoint.next(elem);  
-  }
+  // scroll(elem: string) {
+  //   this.scrollPoint.next(elem);  
+  // }
 
  
 
