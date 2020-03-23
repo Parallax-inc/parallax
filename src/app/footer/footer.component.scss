@@ -3,4 +3,14 @@
     padding: 25px 200px;
     color: white;
     font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    span{
+        margin-right: 50px;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
 }

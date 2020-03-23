@@ -39,7 +39,6 @@ export class MainComponent implements OnInit {
     }
 
     let winHeight = document.documentElement.clientHeight;
-
     if (top > winHeight && top < winHeight * 3) {
       this.posImg = (top - winHeight) / 3;
     }
