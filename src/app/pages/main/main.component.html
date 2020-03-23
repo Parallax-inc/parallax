@@ -15,10 +15,9 @@
             </ul>
         </div>
     </div>
-    <div class="parallaxBg">
+    <div class="parallaxBg" [ngStyle]="{'transform': 'translateY(-' + posImg + 'px)'}">
         <img *ngIf="ImgParallax" src="/assets/img/bgParallax.jpg" alt="">
         <img *ngIf="!ImgParallax" src="/assets/img/bg2Parallax.jpg" alt="">
-
     </div>
     <div class="videoBg">
         <div class="darkHover">
@@ -41,11 +40,10 @@
         </div>
         <div class="text">
             <p>Команда досвідчених спеціалістів, дозволяє нам вирішувати задачі будь-якої складності, та
-                задовільнити найскладніші запити бізнесу.
-                Наш досвід та рекомендації задоволених клієнтів, яскраво про це говорять.</p>
+                задовільнити найскладніші запити бізнесу.</p>
         </div>
         <div class="technologis">
-            <p>Технології:</p>
+            <p>Технології які ми використовуємо:</p>
             <img src="/assets/img/angular.png" alt="">
             <img src="/assets/img/react.png" alt="">
             <img src="/assets/img/bootstrap.png" alt="">
@@ -107,13 +105,13 @@
         <div class="servSiteDev servPart">
             <h3>Розробка сайту</h3>
             <p>
-                
-                    - Інтернет магазин<br>
-                    - Сайт візитка<br>
-                    - Сайт каталог<br>
-                    - Односторінковий сайт<br>
-                    - Корпоративний сайт<br>
-                
+
+                - Інтернет магазин<br>
+                - Сайт візитка<br>
+                - Сайт каталог<br>
+                - Односторінковий сайт<br>
+                - Корпоративний сайт<br>
+
             </p>
             <img src="/assets/img/services/develop.jpg" alt="">
             <div class="darkHover"></div>

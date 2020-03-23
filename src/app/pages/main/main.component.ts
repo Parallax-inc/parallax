@@ -42,20 +42,11 @@ export class MainComponent implements OnInit {
 
     if (top > winHeight && top < winHeight * 3) {
       this.posImg = (top - winHeight) / 3;
-      let bgParallax = document.getElementsByClassName('parallaxBg');
-      bgParallax[0].style.transform = `translateY(-${this.posImg}px)`;
-
     }
     if (top > winHeight * 3 -350) {
       this.posImg = (top - winHeight*3) / 3;
-      let bgParallax = document.getElementsByClassName('parallaxBg');
-      bgParallax[0].style.transform = `translateY(-${this.posImg}px)`;
     }
 
-
-
-
-    // bgParallax.style.top = `${top/100}px`;
   }
 
   animationService() {
@@ -65,12 +56,7 @@ export class MainComponent implements OnInit {
     });
   }
   showMenu() {
-    if (this.menubig) {
-      this.menubig = false;
-    } else {
-      this.menubig = true;
-    }
-
+    this.menubig =!this.menubig;
   }
 
   scrollPoint(scrollPart): void {
