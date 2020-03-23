@@ -1,0 +1,10 @@
+<div class="container">
+    <form>
+        <p>login:</p>
+        <input type="text" [(ngModel)]="login" name="login" class="form-control" placeholder="введите login">
+        <p>Введите пароль:</p>
+        <input type="text" [(ngModel)]="pass" name="pass" class="form-control"
+            placeholder="введите пароль...">
+        <button (click)="auth()" type="button" class="btn btn-success">Авторизация</button>
+    </form>
+</div>
