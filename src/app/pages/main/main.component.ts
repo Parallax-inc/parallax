@@ -14,6 +14,7 @@ export class MainComponent implements OnInit {
   scrollBtn: boolean;
   arrowUp: boolean;
   title = 'Веб студія - PARALLAX';
+  posImg: number;
 
   constructor(public scrollService: ScrollService) { }
 
@@ -39,36 +40,38 @@ export class MainComponent implements OnInit {
     }
 
     let winHeight = document.documentElement.clientHeight;
-    let posImg = 0;
 
-    if(top>winHeight*2){
-      posImg = top/10;
+    if (top > winHeight && top < winHeight * 3) {
+      this.posImg = (top - winHeight) / 3;
       let bgParallax = document.getElementsByClassName('parallaxBg');
-      console.log(`position = ${top}`);
-      // console.log(`mrginTop = ${posImg/50}`);
-      // bgParallax[0].style.transform = `translateY(-${top/10}px)`;
-      // console.log(bgParallax[0]);
-    } 
-    
-    
-    
-    
+      bgParallax[0].style.transform = `translateY(-${this.posImg}px)`;
+
+    }
+    if (top > winHeight * 3 -350) {
+      this.posImg = (top - winHeight*3) / 3;
+      let bgParallax = document.getElementsByClassName('parallaxBg');
+      bgParallax[0].style.transform = `translateY(-${this.posImg}px)`;
+    }
+
+
+
+
     // bgParallax.style.top = `${top/100}px`;
   }
 
-  animationService(){
+  animationService() {
     anime({
       targets: `.servPart`,
       translateY: 10,
     });
   }
-  showMenu(){
-    if(this.menubig){
+  showMenu() {
+    if (this.menubig) {
       this.menubig = false;
     } else {
       this.menubig = true;
     }
-    
+
   }
 
   scrollPoint(scrollPart): void {
@@ -130,7 +133,7 @@ export class MainComponent implements OnInit {
 
   }
 
- 
+
 
   animatetitle() {
     let mas = this.title.split('');
