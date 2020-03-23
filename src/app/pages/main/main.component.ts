@@ -37,12 +37,21 @@ export class MainComponent implements OnInit {
     } else {
       this.scrollBtn = false;
     }
-    let bgParallax = document.getElementsByClassName('parallaxBg');
-    console.log(`position = ${top}`);
-    console.log(`bg = ${top/50}`);
+
+    let winHeight = document.documentElement.clientHeight;
+    let posImg = 0;
+
+    if(top>winHeight*2){
+      posImg = top/10;
+      let bgParallax = document.getElementsByClassName('parallaxBg');
+      console.log(`position = ${top}`);
+      // console.log(`mrginTop = ${posImg/50}`);
+      // bgParallax[0].style.transform = `translateY(-${top/10}px)`;
+      // console.log(bgParallax[0]);
+    } 
     
-    bgParallax[0].style.marginTop = `-${top/5}px` 
-    // console.log(bgParallax[0]);
+    
+    
     
     // bgParallax.style.top = `${top/100}px`;
   }
