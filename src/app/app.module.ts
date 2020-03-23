@@ -2,8 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 
-import { IsLoggedIn } from './pages/auth/isLogged.guard';
+import { IsLoggedIn } from './pages/isLogged.guard';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -31,12 +33,13 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    HttpModule,
+    HttpClientModule,
     FlashMessagesModule.forRoot()
   ],
-  providers: [HttpClientModule, IsLoggedIn],
+  providers: [IsLoggedIn],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,10 +1,10 @@
-<p>auth works!</p>
-
 <div class="container">
-
-    <form (submit)='userAuth()'>
-        <input type="text" [(ngModel)]='login' name="login" placeholder="Введіть імя">
-        <input type="password" [(ngModel)]='pass' name="pass" placeholder="Введіть імя">
-        <button type="submit">Увійти</button>
+    <form>
+        <p>login:</p>
+        <input type="text" [(ngModel)]="login" name="login" class="form-control" placeholder="введите login">
+        <p>Введите пароль:</p>
+        <input type="text" [(ngModel)]="pass" name="pass" class="form-control"
+            placeholder="введите пароль...">
+        <button (click)="auth()" type="button" class="btn btn-success">Авторизация</button>
     </form>
 </div>

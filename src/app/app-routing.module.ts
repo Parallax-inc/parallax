@@ -6,7 +6,7 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthComponent } from './pages/auth/auth.component';
-import { IsLoggedIn } from './pages/auth/isLogged.guard';
+import { IsLoggedIn } from './pages/isLogged.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'contacts', component: ContactsComponent },
   {
-    path: 'admin', component: AdminComponent, canActivate: [IsLoggedIn], children: [
+    path: 'admin', component: AdminComponent, canActivate:[IsLoggedIn], children: [
       // { path: '', redirectTo: 'products', pathMatch: 'full' },
 
       // { path: 'products', component: ProductsComponent },
