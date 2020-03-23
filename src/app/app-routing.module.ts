@@ -5,16 +5,18 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { AdminComponent } from './admin/admin.component';
-
+import { AuthComponent } from './pages/auth/auth.component';
+import { IsLoggedIn } from './pages/auth/isLogged.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
+  { path: 'auth', component: AuthComponent },
   { path: 'main', component: MainComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'contacts', component: ContactsComponent },
   {
-    path: 'admin', component: AdminComponent, children: [
+    path: 'admin', component: AdminComponent, canActivate: [IsLoggedIn], children: [
       // { path: '', redirectTo: 'products', pathMatch: 'full' },
 
       // { path: 'products', component: ProductsComponent },
