@@ -81,7 +81,6 @@ export class MainComponent implements OnInit {
     const scroll = setInterval(scrollStep, 10);
     function scrollStep() {
       const position = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
-      // console.log(position);
       let difference = position - point;
 
       if (position > point) {
@@ -109,13 +108,9 @@ export class MainComponent implements OnInit {
         clearInterval(scroll);
       }
     }
-
     if (scrollPart == 'main') {
       window.scrollBy(0, -100);
     }
-
-    // console.log('scroll');
-
   }
 
 
