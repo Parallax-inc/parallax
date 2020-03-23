@@ -37,6 +37,14 @@ export class MainComponent implements OnInit {
     } else {
       this.scrollBtn = false;
     }
+    let bgParallax = document.getElementsByClassName('parallaxBg');
+    console.log(`position = ${top}`);
+    console.log(`bg = ${top/50}`);
+    
+    bgParallax[0].style.marginTop = `-${top/5}px` 
+    // console.log(bgParallax[0]);
+    
+    // bgParallax.style.top = `${top/100}px`;
   }
 
   animationService(){
