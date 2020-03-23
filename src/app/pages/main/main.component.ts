@@ -27,7 +27,6 @@ export class MainComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event']) onscroll(event): void {
     const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
-    // console.log(top);
     if (top > 2400) {
       this.ImgParallax = false;
     } else {

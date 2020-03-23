@@ -6,7 +6,7 @@
         </div>
         <div class="menuList" [ngClass]="{menuListShow:menubig}">
             <ul>
-                <li (click)="scrollPoint('main')" >Головна</li>
+                <li (click)="scrollPoint('main')">Головна</li>
                 <li (click)="scrollPoint('aboutUs')">Про нас</li>
                 <li (click)="scrollPoint('portfolio')">Наші роботи</li>
                 <li (click)="scrollPoint('services')">Послуги</li>
@@ -16,8 +16,8 @@
         </div>
     </div>
     <div class="parallaxBg">
-        <img  *ngIf="ImgParallax" src="/assets/img/bgParallax.jpg" alt="">
-        <img  *ngIf="!ImgParallax" src="/assets/img/bg2Parallax.jpg" alt="">
+        <img *ngIf="ImgParallax" src="/assets/img/bgParallax.jpg" alt="">
+        <img *ngIf="!ImgParallax" src="/assets/img/bg2Parallax.jpg" alt="">
 
     </div>
     <div class="videoBg">
@@ -99,25 +99,36 @@
         </div>
         <div class="servDesign servPart">
             <h3>UI та UX дизайн сайту</h3>
-            <p>Створення індивідуального дизайну відповідно до потреб замовника. Оригінально, креативно, красиво, функціонально.</p>
+            <p>Створення індивідуального дизайну відповідно до потреб замовника. Оригінально, креативно, красиво,
+                функціонально.</p>
             <img src="/assets/img/services/disign.jpg" alt="">
             <div class="darkHover"></div>
         </div>
         <div class="servSiteDev servPart">
             <h3>Розробка сайту</h3>
-            <p>Створюємо сайти для різних потреб. А саме такі як інтернет магазин, сайт-візитка, корпоративний сайт</p>
+            <p>
+                
+                    - Інтернет магазин<br>
+                    - Сайт візитка<br>
+                    - Сайт каталог<br>
+                    - Односторінковий сайт<br>
+                    - Корпоративний сайт<br>
+                
+            </p>
             <img src="/assets/img/services/develop.jpg" alt="">
             <div class="darkHover"></div>
         </div>
         <div class="servHosting servPart">
             <h3>Розміщення сайту на власному хостінгу</h3>
-            <p>Розміщуємо сайт на нашому хостингу, який розташований в Німеччині. Хостинг швидкий і безпечний. Зберігання на SSD дисках</p>
+            <p>Розміщуємо сайт на нашому хостингу, який розташований в Німеччині. Хостинг швидкий і безпечний.
+                Зберігання на SSD дисках</p>
             <img src="/assets/img/services/clouds.jpeg" alt="">
             <div class="darkHover"></div>
         </div>
         <div class="servDomain servPart">
             <h3>Реєстрація домену (імені)</h3>
-            <p>Реєструємо доменне ім'я в Інтернеті, як в міжнародних доменних зонах так і в Україні. Допомагаємо із вигадуванням хорошего імені для сайту.</p>
+            <p>Реєструємо доменне ім'я в Інтернеті, як в міжнародних доменних зонах так і в Україні. Допомагаємо із
+                вигадуванням хорошего імені для сайту.</p>
             <img src="/assets/img/services/domain.jpg" alt="">
             <div class="darkHover"></div>
         </div>
@@ -135,7 +146,7 @@
         </div>
     </div>
 
-    
+
     <div class="whyWe">
         <div class="title">
             <p>Чому варто обрати нас?</p>
