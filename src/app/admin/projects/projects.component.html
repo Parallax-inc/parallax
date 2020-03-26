@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="title">
+        <h1>Проекти</h1>
+    </div>
+    <form action="">
+        <p>Назва проекту</p>
+        <input type="text" [(ngModel)]="name" name="name">
+
+        <p>Категорія:</p>
+        <select name="" id="" [(ngModel)]="category" name="category">
+            <option value="Сайт-візитка">Сайт-візитка</option>
+            <option value="Інтернет магазин">Інтернет магазин</option>
+            <option value="Портфоліо">Портфоліо</option>
+            <option value="Корпоративний сайт">Корпоративний сайт</option>
+        </select>
+
+        <p>Посилання на оригінальну сторінку сайта:</p>
+        <input type="text" [(ngModel)]="link" name="link">
+        
+        <p>Опис:</p>
+        <textarea name="" id="" cols="30" rows="3" [(ngModel)]="desc" name="desc"></textarea>
+        
+        <p>Виберіть фото проекту:</p>
+        <!-- <label for="files">Тицьни тут і виберу пару фоток</label> -->
+        <input multiple #file type="file" accept="image/*" name="file" id="file" (change)="addImages(file.files)" /> 
+        <button (click)="onSubmit()" >Добавити</button>
+    </form>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Назва проекту</th>
+                <th scope="col">Категорія</th>
+                <th scope="col">Опис</th>
+                <th scope="col">Link</th>
+                <th scope="col">Дії</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of projectArray; let i = index" >
+                <th scope="row">{{i+1}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.category}}</td>
+                <td>{{item.desc}}</td>
+                <td>{{item.link}}</td>
+                <td class="actions">
+                    <button class="deleteBtn" (click)="deleteProject(item._id)" >delete</button>
+                    <!-- <button class="editBtn"  (click)="editProject(task.task, task.id)" >edit</button> -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

@@ -1,1 +1,21 @@
-<p>admin works!</p>
+<div class="adminContainer">
+    <div class="header">
+        <span>Панель администратора</span>
+        <div class="exit" routerLink="/main">Exit</div>
+    </div>
+    <nav>
+        <ul>
+            <li routerLink='project'>Проекти</li>
+            <li>Заказы</li>
+            <li>Покупатели</li>
+            <li>Обратная связь</li>
+            <li>Банеры</li>
+        </ul>
+    </nav>
+
+
+
+    <div class="main">
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -240,7 +240,6 @@
       position: relative;
       width: 40%;
       min-width: 300px;
-      // margin: 25px 100px;
       .darkHover {
         position: absolute;
         top: 10px;
@@ -253,7 +252,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1rf 1fr 1fr;
-        // z-index: ;
       }
       &:hover .darkHover {
         opacity: 1;

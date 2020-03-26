@@ -16,13 +16,14 @@ export class MainComponent implements OnInit {
   title = 'Веб студія - PARALLAX';
   posImg: number;
 
+
   constructor(public scrollService: ScrollService) { }
 
   ngOnInit() {
     setTimeout(() => {
       this.animatetitle();
     }, 500);
-
+      
   }
 
   @HostListener('window:scroll', ['$event']) onscroll(event): void {

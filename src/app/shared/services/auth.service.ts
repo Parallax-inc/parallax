@@ -12,7 +12,7 @@ export class AuthService {
 
   authUser(users){
     let headers = new Headers();
-    return this.http.post('http://localhost:3000/auth', 
+    return this.http.post('http://188.40.170.11:3003/auth', 
     users, 
     {headers: headers}).pipe(map((response: any) => response.json()));
   }

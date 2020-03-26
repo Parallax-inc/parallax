@@ -3,20 +3,25 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 
 import { WebServiceService } from './web-service.service';
+import { Form } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
-export class BgService {
+export class BackenadService {
   constructor(private webService: WebServiceService, private http: HttpClient) {
 
   }
 
-  getPortrait() {
-    return this.webService.get('api/portrait');
+  getProject() {
+    return this.webService.get('get/project');
   }
  
-  createPortrait(data: string) {
-    return this.webService.post('api/portrait', data)
+  postProject(data: FormData) {
+    return this.webService.post('api/post/project', data)
+  }
+
+  deleteProject(id: string) {
+    return this.webService.delete(`delete/${id}`);
   }
 }

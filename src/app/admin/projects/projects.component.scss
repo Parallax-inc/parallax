@@ -1,0 +1,81 @@
+.container{
+    width: 100%;
+    height: 100%;
+    .title{
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+    }
+    form{
+        margin: 25px;
+        p{
+            font-size: 25px;
+            margin-top: 25px;
+            margin-bottom: 5px;
+        }
+        input, select, textarea{
+            width: 500px;
+            padding: 5px;
+            font-size: 20px;
+
+        }
+        label{
+            padding: 7px;
+            font-size: 20px;
+            border: 1px solid black;
+            background-color: lightgrey;
+            color: black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button{
+            padding: 5px;
+            font-size: 20px;
+            margin-left: 25px;
+            border-radius: 5px;
+            outline: none;
+        }
+    }
+
+    .table {
+        width: 100%;
+        margin-top: 25px;
+        font-size: 20px;
+        .thead-dark {
+          background-color: #2b303b;
+          color: whitesmoke;
+          font-size: 18px;
+        }
+        tr {
+          height: 40px;
+          td {
+            height: 70px;
+            padding-left: 10px;
+            text-align: center;
+          }
+        }
+        .actions{
+            display: flex;
+            flex-direction: row;
+        }
+        button{
+            font-size: 18px;
+            padding: 5px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid lightgrey;
+            color: white;
+        }
+        .deleteBtn{
+            background-color: #DC3545;
+        }
+        .editBtn{
+            background-color: #FFC107;
+            color: black;
+        }
+        .shareBtn{
+            background-color: #007BFF;
+        }
+    
+      }
+}

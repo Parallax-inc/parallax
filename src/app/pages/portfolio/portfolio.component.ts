@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BackenadService } from 'src/app/shared/services/backend.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent implements OnInit {
-
-  constructor() { }
+  projectArray = [];
+  constructor(public backEnd: BackenadService) { }
 
   ngOnInit() {
+    this.getProject();
   }
+
+  getProject() {
+    this.backEnd.getProject().subscribe((res) => {
+      this.projectArray = res as [];
+      console.log(this.projectArray); 
+    })
+  }
+  
 
 }

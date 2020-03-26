@@ -6,14 +6,19 @@
         <span> повернутися на головну</span>
     </div>
     <div class="containerInside">
-        <div class="site">
-            <img src="/assets/img/works/neofoto/main.png" alt="">
-        </div>
-        <div class="site">
-            <img src="/assets/img/works/bofi/main.png" alt="">
-        </div>
-        <div class="site">
-            <img src="/assets/img/works/liketechno/Annotation 2020-03-13 103105.png" alt="">
+        <div class="site" *ngFor="let item of projectArray" >
+            <img class="imgBg" src="{{item.arrayImages[0].path}}" alt="">
+            <div class="darkHover">
+                <div class="nameSite">{{item.name}}</div>
+                <div class="themesSite">{{item.category}}</div>
+                <div class="subscribeSite">{{item.desc}}</div>
+                <div class="linkSite">
+                    <a href="{{item.link}}" target="_blank">Перейти до сайту</a>
+                    <span><img src="/assets/img/next.svg" alt=""></span>
+                    <span><img src="/assets/img/next.svg" alt=""></span>
+                    <span><img src="/assets/img/next.svg" alt=""></span>
+                </div>
+            </div>
         </div>
     </div>
 </div>

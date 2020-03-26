@@ -1,0 +1,72 @@
+.adminContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 998;
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background-color: #2B303B;
+        color: white;
+        font-size: 20px;
+        padding: 5px 25px;
+
+        .exit {
+            position: absolute;
+            right: 25px;
+            top: 10px;
+            padding: 5px 25px;
+            background-color: red;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+
+    nav {
+        width: 300px;
+        position: fixed;
+        left: 0;
+        top: 50px;
+        bottom: 0;
+        background-color: #2B303B;
+        color: #507795;
+        display: block;
+        ul{
+            li{
+                width: 100%;
+                cursor: pointer;
+                list-style-type: none;
+                padding: 10px 25px;
+                cursor: pointer;
+                list-style-type: none;
+                padding: 10px 45px;
+                background-color: #21252D;
+                outline: none;
+                font-size: 18px;
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .main {
+        width: 100%;
+        /* min-height: 500px; */
+        height: 100%;
+        padding-left: 320px;
+        padding-right: 20px;
+        padding-top: 60px;
+        background-color: #EDEFF0;
+        z-index: 999;
+        color: black;
+    }
+}

@@ -3,10 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './pages/main/main.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
-import { ServicesComponent } from './pages/services/services.component';
+import { ServicesComponent } from './pages/viewSite/services.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthComponent } from './pages/auth/auth.component';
-import { IsLoggedIn } from './pages/isLogged.guard';
+import { IsLoggedIn } from './shared/services/isLogged.guard';
+import { ProjectsComponent } from './admin/projects/projects.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -17,9 +18,9 @@ const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },
   {
     path: 'admin', component: AdminComponent, canActivate:[IsLoggedIn], children: [
-      // { path: '', redirectTo: 'products', pathMatch: 'full' },
+      { path: '', redirectTo: 'project', pathMatch: 'full' },
 
-      // { path: 'products', component: ProductsComponent },
+      { path: 'project', component: ProjectsComponent },
       // { path: 'category', component: CategoryComponent },
       // { path: 'category/edit/:id', component: CategoryEditComponent },
       // { path: 'brends', component: BrendsComponent },

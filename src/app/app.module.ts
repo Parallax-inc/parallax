@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
-import { IsLoggedIn } from './pages/isLogged.guard';
+import { IsLoggedIn } from './shared/services/isLogged.guard';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,10 +13,11 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './pages/main/main.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
-import { ServicesComponent } from './pages/services/services.component';
+import { ServicesComponent } from './pages/viewSite/services.component';
 import { AdminComponent } from './admin/admin.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { ProjectsComponent } from './admin/projects/projects.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     ServicesComponent,
     AdminComponent,
     AuthComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
