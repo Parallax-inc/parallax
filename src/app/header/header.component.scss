@@ -55,14 +55,9 @@
     top: 0;
     width: 100vw;
     height: 100vh;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
     margin-left: -100vw;
-    // z-index: 190;
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
-    // display: none;
     padding: 150px;
     font-size: 24px;
     transition: 0.5s;
@@ -127,7 +122,7 @@
       height: 40px;
       cursor: pointer;
       transition: 1s;
-      &:hover{
+      &:hover {
         transform: rotate(360deg);
         transition: 1s;
       }
@@ -142,5 +137,45 @@
     transition: 0.5s;
     margin-left: 0;
     // display: block;
+  }
+}
+
+@media screen and (max-width: 1670px) and (min-width: 1025px) {
+}
+@media screen and (max-width: 1024px) and (min-width: 770px) {
+}
+@media screen and (max-width: 769px) and (min-width: 646px) {
+}
+@media screen and (max-width: 645px) and (min-width: 200px) {
+  .container {
+    // width: 375px;
+    display: flex;
+    justify-content: space-around;
+    .tel {
+     display: none;
+    }
+    .modalFeedBackForm {
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      margin-left: -100%;
+      padding: 150px 50px;
+
+      form {
+        width: 90%;
+        div {
+          width: 90%;
+          input {
+            width: 100%;
+          }
+          textarea{
+            width: 100%;
+          }
+        }
+      } 
+    }
+    .modalFeedBackShow {
+      margin-left: 0;
+    }
   }
 }

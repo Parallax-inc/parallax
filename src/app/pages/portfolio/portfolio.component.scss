@@ -81,6 +81,9 @@
         &:hover .darkHover {
           opacity: 1;
         }
+        &:hover .imgBg {
+          transform: scale(1.1);
+        }
         .nameSite {
           grid-row: 1;
           font-size: 50px;
