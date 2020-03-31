@@ -591,14 +591,14 @@
       padding: 0px 0px;
       transition: 0.5s;
       z-index: 102;
-      margin: 10px 40px;
+      margin: 10px 20px;
       #menuHint {
         display: none;
       }
   
       .burgerMenu {
-        width: 70px;
-        height: 70px;
+        width: 40px;
+        height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -610,7 +610,7 @@
         span,
         span::after {
           position: absolute;
-          width: 50px;
+          width: 40px;
           height: 4px;
           background-color: white;
           transition: 0.3s;
@@ -630,11 +630,10 @@
       }
     }
     .menubig {
-      padding: 0px 0px;
       margin: 0;
       width: 100%;
-      height: 50%;
-      padding: 10px 40px;
+      height: 60%;
+      padding: 10px 20px;
       .burgerMenu {
         span:after {
           transform: rotate(-45deg);
@@ -648,23 +647,15 @@
       }
     }
     .menuList {
-      position: absolute;
-      top: 200px;
-      left: 0;
-      // opacity: 0;
-      transition: 0.5s;
-      margin-left: 125px;
+      top: 100px;
+      margin-left: 70px;
       li {
-        list-style-type: none;
         margin-left: 20px;
-        line-height: 2;
+        line-height: 1.5;
         font-size: 35px;
-        color: white;
-        // font-weight: bold;
       }
       li:hover {
-        list-style-type: disc;
-        cursor: pointer;
+        list-style-type: none;
       }
     }
 
@@ -684,7 +675,8 @@
     }
     .videoBg {
       width: 100%;
-      height: 100vh;
+      height: 100%;
+      object-fit: cover;
   
       .darkHover {
         position: absolute;
@@ -699,7 +691,7 @@
         align-items: center;
         .mainTitle {
           width: 80%;
-          font-size: 95px;
+          font-size: 45px;
           font-family: monospace;
           margin-top: -1000px;
           display: flex;
@@ -711,10 +703,10 @@
         .smallTitle {
           position: absolute;
           top: 600px;
-          left: 200px;
+          left: 0px;
           font-size: 25px;
-          width: 500px;
-          height: 150px;
+          width: 100%;
+          height: auto;
           overflow: hidden;
           p {
             margin-top: 200px;
@@ -730,6 +722,44 @@
         object-fit: cover;
         z-index: -5;
         //   opacity: 0.5;
+      }
+    }
+
+    .aboutUs,
+  .ourWorks,
+  .contacts,
+  .services,
+  .whyWe {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    padding: 30px 10px;
+    // border-top: 1px solid white;
+    // border-bottom: 1px solid white;
+  }
+
+
+    .aboutUs {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+  
+      .technologis {
+        display: flex;
+        width: 100%;
+        height: auto;
+        // border: 1px solid whitesmoke;
+        flex-wrap: wrap;
+        justify-content: center;
+        p {
+          width: 100%;
+          font-size: 25px;
+        }
+        img {
+          height: 140px;
+          margin: 25px 35px;
+        }
       }
     }
   }
