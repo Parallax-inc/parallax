@@ -61,33 +61,20 @@
         <div class="title">
             <p>Наші останні роботи</p>
         </div>
-        <div class="workPart">
+        <div class="workPart" *ngFor="let item of randomProjectArray">
+            <img class="imgBg" src="{{item.arrayImages[0].path}}" alt="">
             <div class="darkHover">
-                <div class="nameSite">NEOFOTO</div>
-                <div class="themesSite">Сайт - портфоліо</div>
-                <div class="subscribeSite">Фотостудія, проведення фотосесій професійним фотографом, візаж</div>
+                <div class="nameSite">{{item.name}}</div>
+                <div class="themesSite">{{item.category}}</div>
+                <div class="subscribeSite">{{item.desc}}</div>
                 <div class="linkSite">
-                    <a href="http://neofoto.com.ua/" target="_blank">Перейти до сайту</a>
+                    <a href="{{item.link}}" target="_blank">Перейти до сайту</a>
                     <span class="arrow1"><img src="/assets/img/next.svg" alt=""></span>
                     <span class="arrow2"><img src="/assets/img/next.svg" alt=""></span>
                     <span class="arrow3"><img src="/assets/img/next.svg" alt=""></span>
                 </div>
             </div>
             <img src="/assets/img/works/neofoto/main.png" alt="">
-        </div>
-        <div class="workPart">
-            <div class="darkHover">
-                <div class="nameSite">BOFI</div>
-                <div class="themesSite">Корпоративний сайт</div>
-                <div class="subscribeSite">Продаж та встановлення кліматичного обладнання</div>
-                <div class="linkSite">
-                    <a href="http://bofi.com.ua/" target="_blank">Перейти до сайту</a>
-                    <span class="arrow1"><img src="/assets/img/next.svg" alt=""></span>
-                    <span class="arrow2"><img src="/assets/img/next.svg" alt=""></span>
-                    <span class="arrow3"><img src="/assets/img/next.svg" alt=""></span>
-                </div>
-            </div>
-            <img src="/assets/img/works/bofi/main.png" alt="">
         </div>
         <button routerLink='/portfolio'>Переглянути більше </button>
     </div>

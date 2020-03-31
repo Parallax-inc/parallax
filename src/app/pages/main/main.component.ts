@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import anime from 'animejs/lib/anime.es.js';
 import { ScrollService } from 'src/app/shared/services/scroll.service';
+import { BackenadService } from 'src/app/shared/services/backend.service';
 
 
 @Component({
@@ -16,14 +17,19 @@ export class MainComponent implements OnInit {
   title = 'Веб студія - PARALLAX';
   posImg: number;
 
+  projectArray = [];
+  randomProjectArray = [];
+  random: number;
 
-  constructor(public scrollService: ScrollService) { }
+
+  constructor(public scrollService: ScrollService, public backEnd: BackenadService) { }
 
   ngOnInit() {
+    this.getProject()
+
     setTimeout(() => {
       this.animatetitle();
     }, 500);
-      
   }
 
   @HostListener('window:scroll', ['$event']) onscroll(event): void {
@@ -43,10 +49,31 @@ export class MainComponent implements OnInit {
     if (top > winHeight && top < winHeight * 3) {
       this.posImg = (top - winHeight) / 3;
     }
-    if (top > winHeight * 3 -350) {
-      this.posImg = (top - winHeight*3) / 3;
+    if (top > winHeight * 3 - 350) {
+      this.posImg = (top - winHeight * 3) / 3;
     }
 
+  }
+
+  randerRandomOurWorks(){
+    let min = 0;
+    let max = this.projectArray.length - 1
+    this.random = Math.floor(min + Math.random() * (max - min));
+    console.log('min =' + min);
+    console.log('max =' + max);
+    
+    console.log(this.random);
+    
+    this.randomProjectArray = this.projectArray.slice(this.random,this.random+2)
+    console.log(this.projectArray);
+    
+  }
+
+  getProject() {
+    this.backEnd.getProject().subscribe((res) => {
+      this.projectArray = res as [];
+      this.randerRandomOurWorks();
+    })
   }
 
   animationService() {
@@ -56,7 +83,7 @@ export class MainComponent implements OnInit {
     });
   }
   showMenu() {
-    this.menubig =!this.menubig;
+    this.menubig = !this.menubig;
   }
 
   scrollPoint(scrollPart): void {
