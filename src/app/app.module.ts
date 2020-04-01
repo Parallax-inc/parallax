@@ -35,8 +35,8 @@ import { ProjectsComponent } from './admin/projects/projects.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
+    AppRoutingModule,
     HttpModule,
     HttpClientModule,
     FlashMessagesModule.forRoot()

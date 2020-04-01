@@ -179,20 +179,20 @@
             <p>Контакти</p>
         </div>
         <div class="feedbackForm">
-            <form action="">
+            <form >
                 <div>
                     <p>*Ваше імя:</p>
-                    <input type="text">
+                    <input type="text" [(ngModel)]="nameClient" name="nameClient">
                     <p>*Ваш телефон:</p>
-                    <input type="text">
+                    <input type="text" [(ngModel)]="phone" name="phone">
                     <p>*Ваше email:</p>
-                    <input type="text">
+                    <input type="text" [(ngModel)]="email" name="email">
                 </div>
                 <div>
                     <p>*Ваше повідомлення</p>
-                    <textarea name="" id="" cols="20" rows="10"></textarea>
+                    <textarea id="" cols="20" rows="10" [(ngModel)]="text" name="text"></textarea>
                 </div>
-                <button>Відправити</button>
+                <button type="button" (click)="sendFeedBack()">Відправити</button>
             </form>
         </div>
         <div class="contactsMini">
