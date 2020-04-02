@@ -55,15 +55,23 @@
     overflow: hidden;
     .site {
       position: relative;
+      overflow: hidden;
+      border-radius: 10px;
       &:hover .darkHover {
         opacity: 1;
         transition: 0.5s;
+      }
+      &:hover img {
+        transform: scale(1.2);
+        transition: 2s;
       }
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         z-index: -1;
+        transition: 2s;
+
       }
       .darkHover {
         position: absolute;

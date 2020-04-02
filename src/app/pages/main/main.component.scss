@@ -192,7 +192,6 @@
   .arrowUp {
     transition: 3s;
     top: -50px;
-    
   }
 
   .aboutUs,
@@ -246,6 +245,10 @@
       position: relative;
       width: 40%;
       min-width: 300px;
+      border: 1px solid;
+      border-radius: 10px;
+      overflow: hidden;
+
       .darkHover {
         position: absolute;
         top: 10px;
@@ -261,6 +264,10 @@
       }
       &:hover .darkHover {
         opacity: 1;
+      }
+      &:hover img {
+        transform: scale(1.2);
+        transition: 2s;
       }
       .nameSite {
         grid-row: 1;
@@ -315,6 +322,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: 2s;
         // z-index: -1;
       }
     }
@@ -590,7 +598,6 @@
       padding: 100px 50px 30px 50px;
     }
     .ourWorks {
-  
       .workPart {
         width: 45%;
       }
@@ -607,8 +614,6 @@
           font-size: 75px;
         }
       }
-  
-
     }
     .aboutUs,
     .ourWorks,
@@ -616,7 +621,6 @@
     .services,
     .whyWe {
       padding: 30px 50px;
-
     }
     .ourWorks {
       padding: 30px 20px;
@@ -655,7 +659,7 @@
     }
     .services {
       .servPart {
-        p{
+        p {
           margin-bottom: 0;
         }
       }
@@ -795,6 +799,10 @@
       // border-top: 1px solid white;
       // border-bottom: 1px solid white;
     }
+    .ourWorks,
+    .whyWe {
+      margin-top: 150px;
+    }
 
     .aboutUs {
       .text {
@@ -864,7 +872,7 @@
         width: 100%;
         height: 130px;
         margin-bottom: 20px;
-        h3{
+        h3 {
           opacity: 1;
           transition: 0.5s;
         }
@@ -872,7 +880,7 @@
           transition: 0.5s;
           opacity: 0;
         }
-        p{
+        p {
           font-size: 18px;
         }
       }
@@ -882,13 +890,13 @@
       padding-top: 70px;
       display: flex;
       flex-wrap: wrap;
-  
+
       .whyPart {
         width: 100%;
         height: 100px;
         margin-bottom: 20px;
-  
-        h3{
+
+        h3 {
           opacity: 1;
           transition: 0.5s;
         }
