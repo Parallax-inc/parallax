@@ -18,6 +18,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ProjectsComponent } from './admin/projects/projects.component';
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ProjectsComponent } from './admin/projects/projects.component';
     AppRoutingModule,
     HttpModule,
     HttpClientModule,
-    FlashMessagesModule.forRoot()
+    FlashMessagesModule.forRoot(),
+    Ng2PageScrollModule
   ],
   providers: [IsLoggedIn],
   bootstrap: [AppComponent]

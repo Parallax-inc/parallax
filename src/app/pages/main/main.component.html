@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="main">
     <div class="menu" [ngClass]="{menubig:menubig}" (click)="showMenu()">
         <span *ngIf="!menubig" id="menuHint">Меню</span>
         <div class="burgerMenu">
@@ -6,12 +6,12 @@
         </div>
         <nav class="menuList" [ngClass]="{menuListShow:menubig}">
             <ul>
-                <li (click)="scrollPoint('main')">Головна</li>
-                <li (click)="scrollPoint('aboutUs')">Про нас</li>
-                <li (click)="scrollPoint('portfolio')">Наші роботи</li>
-                <li (click)="scrollPoint('services')">Послуги</li>
-                <li (click)="scrollPoint('whyWe')">Чому ми?</li>
-                <li (click)="scrollPoint('contacts')">Контакти</li>
+                <a pageScroll  href="#main"><li>Головна</li></a>
+                <a pageScroll  href="#aboutUs"><li>Про нас</li></a>
+                <a pageScroll  href="#ourWorks"><li>Наші роботи</li></a>
+                <a pageScroll  href="#services"><li>Послуги</li></a>
+                <a pageScroll  href="#whyWe"><li>Чому ми?</li></a>
+                <a pageScroll  href="#contacts"><li>Контакти</li></a>
             </ul>
         </nav>
     </div>
@@ -34,7 +34,7 @@
             <source src="/assets/video/bg.webm" type="video/webm">
         </video>
     </div>
-    <div class="aboutUs">
+    <div class="aboutUs" id="aboutUs">
         <div class="title">
             <p>Про нас</p>
         </div>
@@ -57,7 +57,7 @@
         </div>
 
     </div>
-    <div class="ourWorks">
+    <div class="ourWorks" id="ourWorks">
         <div class="title">
             <p>Наші останні роботи</p>
         </div>
@@ -78,7 +78,7 @@
         </div>
         <button routerLink='/portfolio'>Переглянути більше </button>
     </div>
-    <div class="services">
+    <div class="services" id="services">
         <div class="title">
             <p>Послуги</p>
         </div>
@@ -132,7 +132,7 @@
     </div>
 
 
-    <div class="whyWe">
+    <div class="whyWe" id="whyWe">
         <div class="title">
             <p>Чому варто обрати нас?</p>
         </div>
@@ -174,7 +174,7 @@
         </div>
         <p></p><br>
     </div>
-    <div class="contacts">
+    <div class="contacts" id="contacts">
         <div class="title">
             <p>Контакти</p>
         </div>

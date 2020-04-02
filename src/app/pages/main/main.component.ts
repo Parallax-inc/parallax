@@ -29,7 +29,7 @@ export class MainComponent implements OnInit {
   constructor(public scrollService: ScrollService, public backEnd: BackenadService) { }
 
   ngOnInit() {
-    this.getProject()
+    this.getProject();
 
     setTimeout(() => {
       this.animatetitle();
@@ -99,61 +99,6 @@ export class MainComponent implements OnInit {
   showMenu() {
     this.menubig = !this.menubig;
   }
-
-  scrollPoint(scrollPart): void {
-    let winHeight = document.documentElement.clientHeight;
-
-    let point = 0;
-    if (scrollPart == 'main') {
-      point = 0;
-
-    } else if (scrollPart == 'aboutUs') {
-      point = winHeight;
-    } else if (scrollPart == 'portfolio') {
-      point = winHeight * 2 + 350;
-    } else if (scrollPart == 'services') {
-      point = winHeight * 3 + 350;
-    } else if (scrollPart == 'whyWe') {
-      point = winHeight * 4 + 700;
-    } else if (scrollPart == 'contacts') {
-      point = winHeight * 5 + 700;
-    }
-
-    const scroll = setInterval(scrollStep, 10);
-    function scrollStep() {
-      const position = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
-      let difference = position - point;
-
-      if (position > point) {
-        difference = position - point;
-      } else {
-        difference = point - position;
-      }
-
-
-      if (position > point) {
-        if (difference < 20) {
-          window.scrollBy(0, -1);
-        } else {
-          window.scrollBy(0, -20);
-        }
-      }
-      else if (position < point) {
-        if (difference < 20) {
-          window.scrollBy(0, 1);
-        } else {
-          window.scrollBy(0, 20);
-        }
-      }
-      else {
-        clearInterval(scroll);
-      }
-    }
-    if (scrollPart == 'main') {
-      window.scrollBy(0, -100);
-    }
-  }
-
 
 
   animatetitle() {
