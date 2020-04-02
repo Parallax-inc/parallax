@@ -59,7 +59,7 @@
     .site {
       position: relative;
       overflow: hidden;
-      border-radius: 10px;
+      border-radius: 50px 0px 50px 0px;
 
       &:hover .darkHover {
         opacity: 1;
@@ -89,6 +89,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1rf 1fr 1fr;
+        border-radius: 50px 0px 50px 0px;
         // z-index: ;
         &:hover .darkHover {
           opacity: 1;
