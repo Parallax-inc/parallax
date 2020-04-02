@@ -587,15 +587,83 @@
     .whyWe {
       padding: 30px 50px;
     }
-    .ourWorks,
-    .whyWe {
-      margin-top: 350px;
+    .ourWorks {
+  
+      .workPart {
+        width: 45%;
+      }
     }
   }
 }
 @media screen and (max-width: 1024px) and (min-width: 770px) {
+  .container {
+    .videoBg {
+      width: 100%;
+      height: 100vh;
+      .darkHover {
+        .mainTitle {
+          font-size: 75px;
+        }
+      }
+  
+
+    }
+    .aboutUs,
+    .ourWorks,
+    .contacts,
+    .services,
+    .whyWe {
+      padding: 30px 50px;
+
+    }
+    .ourWorks {
+      padding: 30px 20px;
+      .workPart {
+        width: 80%;
+      }
+    }
+    .contacts {
+      .feedbackForm {
+        width: 60%;
+      }
+    }
+  }
 }
 @media screen and (max-width: 769px) and (min-width: 646px) {
+  .container {
+    .aboutUs,
+    .ourWorks,
+    .contacts,
+    .services,
+    .whyWe {
+      padding: 30px 50px;
+    }
+    .aboutUs {
+      .technologis {
+        img {
+          height: 100px;
+        }
+      }
+    }
+    .ourWorks {
+      padding: 30px 20px;
+      .workPart {
+        width: 80%;
+      }
+    }
+    .services {
+      .servPart {
+        p{
+          margin-bottom: 0;
+        }
+      }
+    }
+    .contacts {
+      .feedbackForm {
+        width: 80%;
+      }
+    }
+  }
 }
 @media screen and (max-width: 645px) and (min-width: 200px) {
   .container {

@@ -173,13 +173,29 @@ export class MainComponent implements OnInit {
             duration: 2000,
             width: 60,
           });
-        } else if (winWidth > 645 && winWidth < 1670) {
+        } else if (winWidth > 1030 && winWidth < 1670) {
           anime({
             targets: `.t${index}`,
             translateY: 450,
             scale: 1,
             duration: 2000,
             width: 50,
+          });
+        } else if (winWidth > 770 && winWidth < 1030) {
+          anime({
+            targets: `.t${index}`,
+            translateY: 300,
+            scale: 1,
+            duration: 2000,
+            width: 37,
+          });
+        }else if (winWidth > 645 && winWidth < 770) {
+          anime({
+            targets: `.t${index}`,
+            translateY: 300,
+            scale: 1.2,
+            duration: 2000,
+            width: 45,
           });
         } else if (winWidth < 645) {
           anime({
