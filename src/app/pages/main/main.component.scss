@@ -122,6 +122,7 @@
   .videoBg {
     width: 100%;
     height: 100vh;
+    background-color: black;
 
     .darkHover {
       position: absolute;
@@ -821,7 +822,7 @@
     }
 
     .ourWorks {
-      padding: 10px 10px;
+      padding: 100px 10px;
 
       .workPart {
         width: 100%;
