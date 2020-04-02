@@ -775,7 +775,7 @@
 
       .servPart {
         width: 100%;
-        height: 150px;
+        height: 100px;
         margin-bottom: 20px;
         h3{
           opacity: 1;
@@ -784,6 +784,9 @@
         &:hover h3 {
           transition: 0.5s;
           opacity: 0;
+        }
+        p{
+          font-size: 16px;
         }
       }
     }
