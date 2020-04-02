@@ -245,7 +245,7 @@
       width: 40%;
       min-width: 300px;
       border: 1px solid;
-      border-radius: 10px;
+      border-radius: 50px 0px 50px 0px;
       overflow: hidden;
 
       .darkHover {
@@ -260,6 +260,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1rf 1fr 1fr;
+        border-radius: 50px 0px 50px 0px;
       }
       &:hover .darkHover {
         opacity: 1;
@@ -521,7 +522,7 @@
     justify-content: space-around;
     .feedbackForm {
       width: 500px;
-      p{
+      p {
         text-align: center;
         font-size: 20px;
       }
