@@ -24,4 +24,9 @@ export class BackenadService {
   deleteProject(id: string) {
     return this.webService.delete(`delete/${id}`);
   }
+
+  feedback(text){
+    return this.webService.post('api/feedback', text);
+  }
+
 }
