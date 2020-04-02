@@ -55,18 +55,18 @@ export class MainComponent implements OnInit {
 
   }
 
-  randerRandomOurWorks(){
+  randerRandomOurWorks() {
     let min = 0;
     let max = this.projectArray.length - 1
     this.random = Math.floor(min + Math.random() * (max - min));
     console.log('min =' + min);
     console.log('max =' + max);
-    
+
     console.log(this.random);
-    
-    this.randomProjectArray = this.projectArray.slice(this.random,this.random+2)
+
+    this.randomProjectArray = this.projectArray.slice(this.random, this.random + 2)
     console.log(this.projectArray);
-    
+
   }
 
   getProject() {
@@ -143,6 +143,7 @@ export class MainComponent implements OnInit {
 
 
   animatetitle() {
+    let winWidth = document.documentElement.clientWidth;
     let mas = this.title.split('');
     let maintitle = document.getElementsByClassName('mainTitle');
 
@@ -150,13 +151,24 @@ export class MainComponent implements OnInit {
     mas.forEach((elem, index) => {
       setTimeout(() => {
         maintitle[0].insertAdjacentHTML('beforeend', `<span class='t${index}'>${elem}</span>`);
-        anime({
-          targets: `.t${index}`,
-          translateY: 450,
-          scale: 1.2,
-          duration: 2000,
-          width: 60,
-        });
+        if (winWidth > 645) {
+          anime({
+            targets: `.t${index}`,
+            translateY: 450,
+            scale: 1.2,
+            duration: 2000,
+            width: 60,
+          });
+        } else {
+          anime({
+            targets: `.t${index}`,
+            translateY: 450,
+            scale: 1,
+            duration: 2000,
+            width: 30,
+          });
+        }
+
       }, index * 70);
     })
 

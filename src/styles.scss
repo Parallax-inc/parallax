@@ -7,9 +7,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+body, html {
   background-color: #030303;
   color: whitesmoke;
   font-family: monospace;
+  width: 100%;
   // overflow: hidden;
 }

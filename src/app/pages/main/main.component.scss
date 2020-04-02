@@ -85,6 +85,7 @@
     opacity: 0;
     transition: 0.5s;
     margin-left: 25px;
+    display: none;
     li {
       list-style-type: none;
       margin-left: 20px;
@@ -99,6 +100,7 @@
     }
   }
   .menuListShow {
+    display: block;
     opacity: 1;
   }
 
@@ -174,6 +176,7 @@
     top: 80vh;
     overflow: hidden;
     cursor: pointer;
+    z-index: 105;
     &:hover {
       transition: 0.7s;
       bottom: 260px;
@@ -187,6 +190,7 @@
   .arrowUp {
     transition: 3s;
     top: -50px;
+    
   }
 
   .aboutUs,
@@ -336,7 +340,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px repeat(8, 1fr);
     gap: 20px;
-    
+
     .servPart {
       font-size: 22px;
       color: white;
@@ -347,11 +351,11 @@
       cursor: pointer;
       // transform: translateY(300px);
       z-index: 1;
-      &:hover img{
+      &:hover img {
         transform: scale(1.2);
         transition: 1s;
       }
-      &:hover p{
+      &:hover p {
         margin-bottom: 0px;
         transition: 1s;
       }
@@ -374,7 +378,8 @@
         z-index: -2;
         transition: 1s;
       }
-      p,ul{
+      p,
+      ul {
         font-size: 18px;
         position: absolute;
         width: 90%;
@@ -383,8 +388,6 @@
         margin-bottom: -55%;
         transition: 1s;
       }
-      
-      
     }
     .title {
       margin: 0;
@@ -423,7 +426,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px repeat(8, 1fr);
     gap: 20px;
-    
+
     .whyPart {
       font-size: 22px;
       color: white;
@@ -435,11 +438,11 @@
       // transform: translateY(300px);
       z-index: 1;
 
-      &:hover img{
+      &:hover img {
         transform: scale(1.2);
         transition: 1s;
       }
-      &:hover p{
+      &:hover p {
         margin-bottom: 0px;
         transition: 1s;
       }
@@ -462,7 +465,7 @@
         z-index: -2;
         transition: 1s;
       }
-      p{
+      p {
         font-size: 18px;
         position: absolute;
         width: 90%;
@@ -471,8 +474,6 @@
         margin-bottom: -55%;
         transition: 1s;
       }
-      
-      
     }
     .title {
       margin: 0;
@@ -573,12 +574,14 @@
   }
 }
 
-
-@media screen and (max-width: 1670px) and (min-width: 1025px) {}
-@media screen and (max-width: 1024px) and (min-width: 770px) {}
-@media screen and (max-width: 769px) and (min-width: 646px) {}
+@media screen and (max-width: 1670px) and (min-width: 1025px) {
+}
+@media screen and (max-width: 1024px) and (min-width: 770px) {
+}
+@media screen and (max-width: 769px) and (min-width: 646px) {
+}
 @media screen and (max-width: 645px) and (min-width: 200px) {
-  .container{
+  .container {
     .menu {
       position: fixed;
       top: 0;
@@ -595,7 +598,7 @@
       #menuHint {
         display: none;
       }
-  
+
       .burgerMenu {
         width: 40px;
         height: 40px;
@@ -605,7 +608,7 @@
         position: absolute;
         cursor: pointer;
         transition: 0.5s;
-  
+
         span::before,
         span,
         span::after {
@@ -677,74 +680,42 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-  
+
       .darkHover {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         .mainTitle {
-          width: 80%;
-          font-size: 45px;
-          font-family: monospace;
-          margin-top: -1000px;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: flex-start;
-          // z-index: 99;
+          width: 100%;
+          font-size: 60px;
+          padding-left: 40px;
         }
         .smallTitle {
-          position: absolute;
-          top: 600px;
-          left: 0px;
-          font-size: 25px;
+          top: 500px;
+          left: 10px;
           width: 100%;
-          height: auto;
-          overflow: hidden;
-          p {
-            margin-top: 200px;
-            width: 100%;
-          }
-          // margin-top: 800px;
+          height: 150px;
         }
-      }
-  
-      video {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        z-index: -5;
-        //   opacity: 0.5;
       }
     }
 
     .aboutUs,
-  .ourWorks,
-  .contacts,
-  .services,
-  .whyWe {
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    padding: 30px 10px;
-    // border-top: 1px solid white;
-    // border-bottom: 1px solid white;
-  }
-
+    .ourWorks,
+    .contacts,
+    .services,
+    .whyWe {
+      width: 100%;
+      height: 100vh;
+      background-color: black;
+      padding: 30px 10px;
+      // border-top: 1px solid white;
+      // border-bottom: 1px solid white;
+    }
 
     .aboutUs {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-  
+      .text {
+        font-size: 20px;
+        text-align: center;
+        margin: 15px 0;
+      }
+
       .technologis {
         display: flex;
         width: 100%;
@@ -753,15 +724,114 @@
         flex-wrap: wrap;
         justify-content: center;
         p {
-          width: 100%;
-          font-size: 25px;
+          text-align: center;
+          margin-bottom: 50px;
         }
         img {
-          height: 140px;
-          margin: 25px 35px;
+          height: 60px;
+          margin: 10px 15px;
         }
       }
     }
+
+    .ourWorks {
+      padding: 10px 10px;
+
+      .workPart {
+        width: 100%;
+        .darkHover {
+          opacity: 0;
+        }
+        &:hover .darkHover {
+          opacity: 1;
+        }
+        .nameSite {
+          font-size: 25px;
+        }
+        .themesSite {
+          padding: 10px;
+          font-size: 18px;
+        }
+        .subscribeSite {
+          font-size: 16px;
+        }
+        .linkSite {
+          grid-row: 3;
+          grid-column: 1/3;
+          padding: 10px;
+          font-size: 18px;
+          position: relative;
+        }
+      }
+      button {
+        bottom: 10px;
+      }
+    }
+
+    .services {
+      padding-top: 70px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .servPart {
+        width: 100%;
+        height: 150px;
+        margin-bottom: 20px;
+        h3{
+          opacity: 1;
+          transition: 0.5s;
+        }
+        &:hover h3 {
+          transition: 0.5s;
+          opacity: 0;
+        }
+      }
+    }
+
+    .whyWe {
+      padding-top: 70px;
+      display: flex;
+      flex-wrap: wrap;
+  
+      .whyPart {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 20px;
+  
+        h3{
+          opacity: 1;
+          transition: 0.5s;
+        }
+        &:hover h3 {
+          transition: 0.5s;
+          opacity: 0;
+        }
+      }
+    }
+
+    .contacts {
+      height: auto;
+      .feedbackForm {
+        form {
+          div {
+            padding: 0 40px;
+            input {
+              width: 100%;
+            }
+          }
+          button {
+            margin: 40px;
+          }
+        }
+      }
+      .contactsMini {
+        width: 100%;
+        font-size: 20px;
+      }
+    }
+    .goUpBtn {
+      right: 30px;
+      top: 90vh;
+    }
   }
- 
 }

@@ -14,3 +14,19 @@
         text-decoration: none;
     }
 }
+
+@media screen and (max-width: 1670px) and (min-width: 1025px) {
+}
+@media screen and (max-width: 1024px) and (min-width: 770px) {
+}
+@media screen and (max-width: 769px) and (min-width: 646px) {
+}
+@media screen and (max-width: 645px) and (min-width: 200px) {
+    .container{
+    font-size: 18px;
+    padding: 25px 10px;
+    span{
+        margin-right: 10px;
+    }
+    }
+}
