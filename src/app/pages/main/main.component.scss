@@ -575,6 +575,23 @@
 }
 
 @media screen and (max-width: 1670px) and (min-width: 1025px) {
+  .container {
+    .title {
+      font-size: 45px;
+    }
+
+    .aboutUs,
+    .ourWorks,
+    .contacts,
+    .services,
+    .whyWe {
+      padding: 30px 50px;
+    }
+    .ourWorks,
+    .whyWe {
+      margin-top: 350px;
+    }
+  }
 }
 @media screen and (max-width: 1024px) and (min-width: 770px) {
 }

@@ -20,7 +20,7 @@ export class MainComponent implements OnInit {
   projectArray = [];
   randomProjectArray = [];
   random: number;
-  
+
   nameClient: string;
   phone: string;
   email: string;
@@ -59,7 +59,7 @@ export class MainComponent implements OnInit {
 
   }
 
-  sendFeedBack(){
+  sendFeedBack() {
     this.formData.append('name', this.nameClient);
     this.formData.append('phone', this.phone);
     this.formData.append('email', this.email);
@@ -69,7 +69,7 @@ export class MainComponent implements OnInit {
 
   }
 
-  randerRandomOurWorks(){
+  randerRandomOurWorks() {
     let min = 0;
     let max = this.projectArray.length - 1
     this.random = Math.floor(min + Math.random() * (max - min));
@@ -165,7 +165,7 @@ export class MainComponent implements OnInit {
     mas.forEach((elem, index) => {
       setTimeout(() => {
         maintitle[0].insertAdjacentHTML('beforeend', `<span class='t${index}'>${elem}</span>`);
-        if (winWidth > 645) {
+        if (winWidth > 1670) {
           anime({
             targets: `.t${index}`,
             translateY: 450,
@@ -173,7 +173,15 @@ export class MainComponent implements OnInit {
             duration: 2000,
             width: 60,
           });
-        } else {
+        } else if (winWidth > 645 && winWidth < 1670) {
+          anime({
+            targets: `.t${index}`,
+            translateY: 450,
+            scale: 1,
+            duration: 2000,
+            width: 50,
+          });
+        } else if (winWidth < 645) {
           anime({
             targets: `.t${index}`,
             translateY: 450,
