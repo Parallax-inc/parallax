@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import anime from 'animejs/lib/anime.es.js';
 import { ScrollService } from 'src/app/shared/services/scroll.service';
 import { BackenadService } from 'src/app/shared/services/backend.service';
-
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-main',
@@ -10,17 +10,21 @@ import { BackenadService } from 'src/app/shared/services/backend.service';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  formData = new FormData();
   ImgParallax: boolean;
   menubig: boolean = false;
   scrollBtn: boolean;
   arrowUp: boolean;
   title = 'Веб студія - PARALLAX';
   posImg: number;
-
   projectArray = [];
   randomProjectArray = [];
   random: number;
-
+  
+  nameClient: string;
+  phone: string;
+  email: string;
+  text: string;
 
   constructor(public scrollService: ScrollService, public backEnd: BackenadService) { }
 
@@ -55,7 +59,17 @@ export class MainComponent implements OnInit {
 
   }
 
-  randerRandomOurWorks() {
+  sendFeedBack(){
+    this.formData.append('name', this.nameClient);
+    this.formData.append('phone', this.phone);
+    this.formData.append('email', this.email);
+    this.formData.append('text', this.text);
+    console.log(this.formData)
+    this.backEnd.feedback(this.formData).subscribe((res: any) => { }, (err: any) => { console.log(err); })
+
+  }
+
+  randerRandomOurWorks(){
     let min = 0;
     let max = this.projectArray.length - 1
     this.random = Math.floor(min + Math.random() * (max - min));
@@ -197,5 +211,4 @@ export class MainComponent implements OnInit {
       this.arrowUp = false;
     }, 1500);
   }
-
 }
