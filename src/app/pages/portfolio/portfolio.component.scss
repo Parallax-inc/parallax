@@ -1,8 +1,10 @@
 .container {
-  width: 1200px;
-  min-height: 500px;
-  padding-top: 150px;
+  width: 100%;
+  // min-height: 500px;
+  height: auto;
+  // padding-top: 150px;
   margin: 0px auto;
+  padding: 150px 50px;
 
   a {
     color: white;
@@ -43,8 +45,8 @@
     }
   }
   .containerInside {
-    width: 1200px;
-    min-height: 250px;
+    width: 100%;
+    // min-height: 250px;
     margin: 15px auto;
     // border: 1px solid white;
     display: grid;
@@ -53,10 +55,12 @@
     gap: 25px;
     padding: 15px;
     overflow: hidden;
+
     .site {
       position: relative;
       overflow: hidden;
       border-radius: 10px;
+
       &:hover .darkHover {
         opacity: 1;
         transition: 0.5s;
@@ -141,6 +145,7 @@
 }
 
 @media screen and (max-width: 1670px) and (min-width: 1025px) {
+ 
 }
 @media screen and (max-width: 1024px) and (min-width: 770px) {
 }
