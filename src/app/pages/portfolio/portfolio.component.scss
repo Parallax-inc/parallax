@@ -124,7 +124,54 @@
             left: 250px;
             width: 20px;
             height: 20px;
-              transition: 0.5s;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1670px) and (min-width: 1025px) {
+}
+@media screen and (max-width: 1024px) and (min-width: 770px) {
+}
+@media screen and (max-width: 769px) and (min-width: 646px) {
+}
+@media screen and (max-width: 645px) and (min-width: 200px) {
+  .container {
+    width: 100%;
+    height: auto;
+    // min-height: 500px;
+    padding-top: 150px;
+    margin: 0px auto;
+
+    .containerInside {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .site {
+        position: relative;
+        margin-bottom: 20px;
+        .darkHover {
+          .nameSite {
+            font-size: 30px;
+          }
+          .themesSite {
+            font-size: 20px;
+          }
+          .subscribeSite {
+            font-size: 18px;
+            padding: 0px 10px;
+          }
+          .linkSite {
+            font-size: 20px;
+            span {
+              left: 210px;
+              width: 15px;
+              height: 15px;
+            }
           }
         }
       }
